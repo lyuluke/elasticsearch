@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull image from Elastic
-        run: docker pull docker.elastic.co/logstash/logstash:9.4.2
+        run: docker pull docker.elastic.co/kibana/kibana:9.4.2
         
       # 登录 Docker Hub（使用变量+密钥）
       - name: Login to Docker Hub
@@ -16,5 +16,5 @@ jobs:
         
       - name: Tag and Push
         run: |
-          docker tag docker.elastic.co/logstash/logstash:9.4.2 lyukun/logstash:9.4.2
-          docker push lyukun/logstash:9.4.2
+          docker tag docker.elastic.co/kibana/kibana:9.4.2 lyukun/kibana:9.4.2
+          docker push lyukun/kibana:9.4.2
